@@ -1,10 +1,18 @@
 import "jasmine";
-import { myFunction } from "./index";
+import { arabicToRoman } from "./index";
 
-describe("something", () => {
-  it("should work", () => {
-    expect(myFunction()).toBe(1);
-    expect(true).toBe(true);
-    expect(1).toBe(1);
+describe("Converting arabic to roman", () => {
+  const pairs: Array<[number, string]> = [
+    [0, ""],
+    [1, "I"],
+    [5, "V"],
+    [2, "II"],
+    [4, "IV"],
+  ];
+
+  pairs.forEach(([arabic, roman]) => {
+    it(`for ${arabic} should return ${roman}`, () => {
+      expect(arabicToRoman(arabic)).toBe(roman);
+    });
   });
 });
