@@ -1,0 +1,27 @@
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4px;
+}
+
+.table > div {
+  padding: var(--padding);
+  background: var(--background-low);
+  border-radius: var(--border-radius);
+}
+
+.head {
+  background: var(--background-high) !important;
+  font-weight: 400;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+  grid-column: 1 / 3;
+}
