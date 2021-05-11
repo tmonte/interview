@@ -4,7 +4,8 @@
   "description": "Typescript TDD",
   "main": "index.ts",
   "scripts": {
-    "test": "nodemon --ext ts --exec 'ts-node node_modules/jasmine/bin/jasmine --config=\"./jasmine.config.json\"'"
+    "test-watch": "nodemon --ext ts --exec npm test",
+    "test": "ts-node node_modules/jasmine/bin/jasmine --config=\"./jasmine.config.json\""
   },
   "keywords": [],
   "author": "",
